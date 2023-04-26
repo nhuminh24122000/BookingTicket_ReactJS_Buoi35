@@ -1,38 +1,103 @@
-.App {
+/*  */
+.title {
+  color: yellow;
+}
+
+.screen{
+  width: 100%;
+  height: 40px;
+  border: 40px solid transparent;
+  border-bottom: 40px solid rgba(253, 159, 94, 1);
+  position: relative;
+  margin-bottom: 50px;   
+  box-shadow: 0 29px 22px -20px rgb(255 255 255); 
+}
+
+.screen h5{
+  font-size: 30px;
+}
+
+/*  */
+.seat{
+  margin:0 9px;
+  width: 40px;
+  height: 40px;
   text-align: center;
+  background-color: rgba(240, 236, 235, 0.801);
+  border: 2px solid coral;
+  border-radius: 4px;
+  box-shadow: inset 0 0 4px 4px rgba(215, 211, 210, 0.801);
+  transition: all .5s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.first-row .seat:first-child {
+  background-color: aqua;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 991.98px) { 
+  .seat {
+    margin-top: 5px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.seat:hover{
+  background-color: green;
+  color: #fff;
+  box-shadow: none;
+}
+
+.seat.booked{
+  background-color: rgba(252, 165, 0, 1);
+  box-shadow: none;
+  border-color: rgba(252, 165, 0, 1);
+  color: #fff;
+}
+
+.seat.booking{
+  background-color: rgba(109, 238, 109, 1);
+  box-shadow: none;
+}
+
+/*  */
+.detail{
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.detail p{
+  margin-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box-yellow{
+  width: 40px;
+  height: 40px;
+  background: rgba(252, 165, 0, 1);
+  border-radius: 4px;
+}
+.box-white{
+  width: 40px;
+  height: 40px;
+  background: rgba(240, 236, 235, 0.801);
+  box-shadow: inset 0 0 4px 4px rgba(215, 211, 210, 0.801);
+  border: 2px solid coral;
+  border-radius: 4px;
+}
+
+.box-green{
+  width: 40px;
+  height: 40px;
+  background: rgba(109, 238, 109, 1);
+  border: 2px solid coral;
+  border-radius: 4px;
+}
+
+i.fa-trash-alt{
+  cursor: pointer;
+  transition: all .5s;
+}
+
+i.fa-trash-alt:hover{
+  color: red;
 }
